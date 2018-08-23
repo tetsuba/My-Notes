@@ -46,4 +46,60 @@ BEEP bp BEEP
 * `/s` whitespace `[/t/r/n/f]`
 
 
+
+# character class
+`[...]`
+
+Any characters inside the square brackets will match.
+For example, to match a vowel character: `[aeiou]`.
+
+```
+$ echo 'beep and boop' | sed 's/b[aeiou]\+p/BXXP/g'
+BXXP and BXXP
+```
+
+
+# negated character class
+`[^...]`
+Put a `^` after the opening square bracket in a character class to negate it.
+For example, to match a non-vowel character: `[^aeiou]`
+
+```
+$ echo 'beep boop' | sed 's/[^aeiou]/Z/g'
+ZeeZZZooZ
+
+$ echo 'cool "beans" zzzz' | sed -E 's/"([^"]+)"/\1/g'
+cool XXX zzzz
+```
+
+
+# characte class sequences
+Regex engines provided many pre-defined character class sequences:
+
+* `\w` - word character: `[A-Za-z0-9_]`
+* `\W` - non-word character: `[^A-Za-z0-9_]`
+* `\s` - whitespace: `[ \t\r\n\f]`
+* `\s` - whitespace: `[^ \t\r\n\f]`
+* `\d` - digit: [0-9]`
+* `\d` - non-digit: [^0-9]`
+
+
+
+# achors
+* `^` - anchor at the begining
+* `$` - anchor to the end
+
+ 
+# groups
+(a|b) - match a or b
+
+* `()` capture groups
+* `(?:)` non capture group
+
+```
+echo beep boop | sed -E 's/b(ee|oo)p/XXX/g'
+XXX XXX 
+```
+
+
  
