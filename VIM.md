@@ -1,7 +1,13 @@
 # Vim
 
+# files
+ - `:ls` list files opened
+ - `:e fileName.txt` open file
+ - `:b fn.txT` switch files
+ - `:bp` previous file
+ - `:bn` next file
 
-copy
+# copy
 v: to select what to copy
 y: to copy selected text or to copy the current line
 
@@ -21,7 +27,6 @@ Once selected a block, you can press:
  - $: move to the end of the current line
  - gg: jump to the beggining of the file
  - G: jump to the end of the file
-
 
 # delete
  - x: delete the character under the cursor
