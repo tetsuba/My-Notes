@@ -1,6 +1,6 @@
 #GIT NOTES
 
-## git log
+# git log
 Displays a short log description
 
 * `git log --oneline`
@@ -8,11 +8,14 @@ Displays a short log description
 Show a graph log
 * `git --no-pager log --graph
 
-## git config
+### git log cheatsheet
+https://devhints.io/git-log
+
+# git config
 * `git config --list`
 * `git config --global --list
 
-## git cat-file
+# git cat-file
 Provide content or type and size information for respository objects
 
 * `-t type`
@@ -25,7 +28,36 @@ tree ./git/objects
 git cat-file -t 12wer
 ```
 
-## git tag
+# git tag
+
+
+# git clean
+git clean will clear working area by deleting untracked files
+* -f to do the deletion
+* -d will clean directories
+* --dry-run will display what will be removed 
+
+# git reset
+performs differnt actions depending on the arguments.
+
+### git reset <commit> cheatsheet
+1. Move Head and current branch
+2. Reset the staging area
+3. Reset the working area
+
+
+--soft = (1)
+--mixed = (1) & (2) (default)
+--hard = (1) & (2) & (3)
+
+
+
+
+
+
+
+
+
 
 
 ## git merge --no-ff (no fast forward)
