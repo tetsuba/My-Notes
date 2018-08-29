@@ -31,11 +31,19 @@ git cat-file -t 12wer
 # git tag
 
 
+# git mv
+git move file and keep tracking info
+
 # git clean
 git clean will clear working area by deleting untracked files
 * -f to do the deletion
 * -d will clean directories
 * --dry-run will display what will be removed 
+
+# git checkout
+Reset a file using checkout 
+`git checkout -- fileName.txt`
+
 
 # git reset
 performs differnt actions depending on the arguments.
@@ -49,6 +57,11 @@ performs differnt actions depending on the arguments.
 --soft = (1)
 --mixed = (1) & (2) (default)
 --hard = (1) & (2) & (3)
+
+
+Resets the HEAD of the file back one
+`git reset HEAD fileName.txt`
+
 
 
 # git revert 
@@ -86,7 +99,11 @@ Turn it on:
 
 
 
+# git amend
+Amend is a quick and easy shortcut that lets you make changes to the previous commit
 
+`git commit add .`
+`git commit --amend`
 
 
 
