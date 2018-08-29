@@ -51,10 +51,12 @@ performs differnt actions depending on the arguments.
 --hard = (1) & (2) & (3)
 
 
-
-
-
-
+# git revert 
+* git revery creates a new commit that introduces the opposite changes from the specified commit.
+* The original commit stays in the repository
+* Tip:
+	- Use revert if you're undoing a commit that has already been shared.
+	- Revert does not change hisory
 
 
 
@@ -80,4 +82,11 @@ git merge mew_feature --no-ff
 Turn it on:
  - git config rerere.enabled true
  - use --global flag to enable for all projects
+
+
+
+
+
+
+
 
